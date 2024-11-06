@@ -1,0 +1,565 @@
+
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw ;
+
+    font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(49, 44, 44);
+    margin: 0;
+    padding: 20px;
+    
+  
+  
+  }
+
+/* Define font style variables for easy adjustments */
+:root {
+  --heading-font-family: 'Arial, sans-serif'; /* Replace with your preferred font */
+  --heading-font-weight: 600; /* Adjust weight as needed */
+  --heading-color: #333; /* Base color for all headings */
+  --h1-font-size: 2.5rem; /* Set size for each level */
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.75rem;
+}
+
+/* Base styles for all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  color: var(--heading-color);
+  margin-bottom: 0.5em; /* Consistent spacing */
+  line-height: 1.2; /* Adjust line height for readability */
+}
+
+/* Specific styles for each heading level */
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+/* Add other heading levels as needed */
+
+
+
+
+
+
+
+
+  h1{
+    justify-content: center;
+    font-weight: 900;
+
+  
+    font-size: 80px;
+    color: white;
+    
+    
+    text-align: center;
+    
+  }
+  .resume-container {
+  
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+  
+    margin: 0 auto;
+    background: linear-gradient(to right, rgb(2, 87, 88) 0%, rgb(221, 189, 9) 50%, rgb(6, 245, 213) 100%);
+    padding: 40px;
+    border-radius: 10px;
+    
+}
+
+  /* Left Section */
+  .left-section   {
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    background-color: rgb(8, 8, 8) ; 
+    width: 40%;
+    text-align: center;
+    border-right: 2px solid rgb(248, 207, 3); /* Thinner border */
+  padding-top: 40px;
+  
+  
+  }
+
+  h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    
+  }
+  
+  * Parent container */
+  .profile-Picture {
+  
+    
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: right; /* Vertically center */
+    height: 100vh; /* Full height of the viewport or parent */
+  }
+  
+  /* Profile picture */
+  .profile-Picture {
+    
+
+  
+
+    margin-right: 35px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  
+    border: 5px solid rgb(248, 207, 3);
+    box-shadow: 0 0 16px rgba(4, 252, 252, 0.982); /* White border around the picture */
+  }
+  
+  
+  /* Career Objective and Certification Sections */
+  
+ .Career {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px; /* Rounded corners */
+  border: 2px solid rgb(248, 207, 3);
+  box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
+  padding: 5px;
+
+ }
+
+ .objective{
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px; /* Rounded corners */
+  border: 2px solid rgb(248, 207, 3);
+  box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
+  padding: 5px;
+  
+ }
+   .Certificate{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid rgb(248, 207, 3);
+    box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
+    padding: 5px;
+    
+  }
+  .Certificates{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid rgb(248, 207, 3);
+    box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
+    padding: 5px;
+    
+  }
+  
+
+
+  /* Define common spacing values as CSS variables */
+:root {
+  --main-padding: 1rem; /* Adjust based on preference */
+  --main-margin: 1rem; 
+  --secondary-padding: 0.5rem;
+  --secondary-margin: 0.5rem;
+}
+
+/* Update .Certificates and .Career classes */
+.Certificates,
+.Career {
+  margin: var(--main-margin) auto;  /* Center alignment with consistent margin */
+  padding: var(--main-padding);  /* Consistent padding for inner spacing */
+}
+
+/* Adjust for specific needs if needed */
+.Certificates {
+  margin-bottom: var(--secondary-margin); /* Adjust or remove margin if not needed */
+}
+
+.Career {
+  margin-bottom: var(--secondary-margin); /* Or adjust based on layout requirement */
+}
+
+  
+  
+.inputRightInfo{
+  text-align: center;
+  align-items: center;
+  font-size: 1em;
+    background-color:whitesmoke;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid rgb(248, 207, 3);
+    box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
+    padding: 5px;
+  
+    width: 60%;
+    
+
+    }
+    label {
+      
+      text-align: right;
+
+      font-size: 25px; /* Smaller font size */
+  
+    }
+    .input-gender{
+      text-align: right;
+      margin-right: 50%;
+    
+
+
+
+
+
+    }
+
+
+    input::placeholder, textarea::placeholder, #education , #workExperience,  #projectsDetails , #hobbies{
+      border-radius: 5px; /* Rounded corners */
+    border: 2px solid rgb(248, 207, 3);
+    box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
+  padding: 5px;
+      
+      font-style: italic; /* Italic style for the placeholder text */
+      color: rgb(59, 59, 54); /* Color for placeholder text */
+    
+  }
+  
+ 
+  
+  /* Skills Section */
+  #skills {
+
+    
+    
+  
+    font-size: large;
+    margin-top: 5px; /* Pushes the skills section to the bottom of the left column */
+    align-items: center;
+    font-size: large;
+    margin-top: 5px; /* Pushes the skills section to the bottom of the left column */
+  }
+  
+  #skills .skill {
+    
+    margin-bottom: 20px;
+    border: 1px solid rgb(248, 207, 3); /* Border around the skill elements */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 14px rgba(147, 244, 239, 0.982); 
+
+    padding: 5px;
+  }
+  
+  .skis, .pss {
+    margin-top: 90px;
+    color: white;
+    padding: 10px;
+    border: 2px solid rgb(248, 207, 3);
+    border-radius: 5px; 
+    box-shadow: 0 0 14px rgba(147, 244, 239, 0.982); 
+    
+  }
+  
+  
+  
+  
+  .progress-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    width: 100%;
+    height: 10px;
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 1em;
+  }
+
+  
+  
+  .progress-bar {
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  .html-bar {
+    width: 95%;
+    background-color: rgb(227, 119, 48);
+  }
+  
+  .css-bar {
+    width: 90%;
+    background-color: #c6a953;
+  }
+  
+  .typescript-bar {
+    width: 85%;
+    background-color: #3178c6;
+  }
+  
+  .next.js-bar {
+    width: 95%;
+    background-color: rgb(146, 220, 36);
+  }
+  
+  .git-bar {
+    width: 80%;
+    background-color: #510441;
+  }
+  .analytical-thinking-bar{
+    width: 90%;
+    background-color: #f2cd39;
+  }
+  .debugging-bar{
+    width: 95%;
+    background-color: #56150b;
+  
+  }
+  .communication-bar{
+    width: 90%;
+    background-color: #961598;
+  }
+  
+  .figma-bar{
+    width: 85%;
+    background-color: #0808f9;
+  
+  }
+  
+  .percentage {
+    font-weight: bold;
+    color: #0bf3d8;
+  }
+  
+  /* Right Section */
+  .right-section {
+    flex: 1;
+    padding: 30px;
+  border-radius: 10px;
+    width: 60%;
+    color: white; /* Makes all the text white */
+    border: 2px solid   rgb(248, 207, 3);
+    box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);/* Softer shadow */
+    background-color:rgb(8, 8, 8) ; 
+      
+    
+  }
+  
+  .right-section , legend , #hobbies {
+    font-size: x-large; /* Larger font size */
+    text-align: center;
+
+    
+    
+
+    
+  }
+  #education , #work-experience , #hobbies {
+    font-size:xx-large; /* Larger font size */
+    
+  }
+  
+  .right-section, legend {
+  
+    padding: 3% 6;
+    border: 1px solid rgb(248, 207, 3);
+    border-radius: 5px; /* Adjusted border radius */
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.982); /* Softer shadow */
+    color: whitesmoke
+  }
+  
+  .right-section p,
+  .right-section ul{
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid rgb(248, 207, 3); /* Border around text elements */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(147, 244, 239, 0.982); /* Softer shadow */
+
+  }
+  
+  
+  .links {
+    display: flex; /* Displays list items in a row */
+    gap: 10px; /* Adds space between list items */
+    padding: 0px;
+  
+    list-style-type: none; /* Removes default bullet points */
+    align-items: center; /* Vertically centers list items */
+  }
+  
+  .link {
+    margin-right: 8%;
+    list-style-type: circle; /* Adds a circle bullet to each item */
+    list-style-position: inside;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+  .link::before {
+    content: "●"; /* Adds a custom bullet */
+    color: white; /* Sets bullet color */
+    margin-right: 8px; /* Adds space between bullet and link text */
+  }
+  
+  .link a {
+    font-family: cursive;
+    font-weight: 900;
+    font-size: larger;
+    text-decoration: none;
+    color: #09ede2;
+    text-align: center;
+  }
+  
+  .link a:hover {
+    text-decoration: underline;
+  }
+
+  
+   
+  
+  
+  /* Profile Picture Input */
+  /* Container for profile picture input */
+.pro-pic {
+  
+    
+
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    
+    font-size:larger;
+    position: absolute;
+  }
+ 
+.chose-file{
+       
+  
+padding:12px ;
+margin-left: 25%;
+  
+    color: whitesmoke;
+    background-color: rgb(28, 154, 154);
+    
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid   rgb(248, 207, 3);
+    box-shadow: 0 0 10px rgba(147, 244, 239, 0.982);
+    flex: 1;
+  
+}
+  
+
+  
+  
+  
+  
+  .email-link {
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(28, 250, 250); /* Text color */
+    font-weight: 900; /* Font weight */
+    font-size: larger; /* Font size */
+    text-decoration: none; /* No underline by default */
+  }
+  
+  .email-link:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  
+  
+  .linkedin-link {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(28, 250, 250); /* LinkedIn text color */
+    font-weight: 900; /* Font weight */
+    font-size: larger; /* Font size */
+    text-decoration: none; /* No underline by default */
+  }
+  
+  .linkedin-link:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .github-link {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(28, 250, 250); /* GitHub text color */
+    font-weight: 900; /* Font weight */
+    font-size: larger; /* Font size */
+    text-decoration: none; /* No underline by default */
+  }
+  
+  .github-link:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  
+  
+  
+  /* Toggle Button */
+  button {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0ca0dcb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #21b6b1;
+  }
+  
+  /* Responsive Layout */
+  
+  @media (max-width: 768px) {
+    .resume-container {
+      flex-direction: column;
+      width: 90%;
+    }
+    .left-section, .right-section {
+      width: 100%;
+      margin: 10px 0;
+    }
+    .profile-Picture {
+      width: 150px;
+      height: 150px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+  
+  
+  
+ 

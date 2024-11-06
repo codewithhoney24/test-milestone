@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="resume-container">
+         <!-- Left Section -->
+         <div class="left-section">
+    <form id="resume-container"  >
+       
+        <p class="profile-Picture">
+
+
+            <label for="profilePicture">Profile Picture:</label>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*"><b></b>
+
+        </p >
+            <!-- Career Objective -->
+            <fieldset class="objective">
+                <legend class="Career"  >Career Objective</legend>
+                <textarea id="objective" name="objective" placeholder="Objective" required></textarea><br>    
+            </fieldset>
+
+            <!-- Certifications -->
+            <fieldset class="Certificates">
+                <legend class="Certificate">Certifications</legend>
+                <textarea id="certifications" name="certifications" placeholder="Certifications" required></textarea><br>    
+            </fieldset>
+
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2 class="skis">Skill Sets</h2>
+
+                <fieldset>
+                    <legend>Frontend Technologies</legend>
+                    <textarea id="frontendTechnologies" name="frontendTechnologies" placeholder="Technologies" required></textarea><br>    
+                </fieldset>
+
+                <div class="skill">
+                    <label for="html">HTML</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar html-bar" style="width: 95%;"></div>
+                    </div>
+                    <span class="percentage">95%</span>
+                </div>
+
+                <div class="skill">
+                    <label for="css">CSS</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar css-bar" style="width: 90%;"></div>
+                    </div>
+                    <span class="percentage">90%</span>
+                </div>
+
+                <div class="skill">
+                    <label for="typescript">TypeScript</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar typescript-bar" style="width: 85%;"></div>
+                    </div>
+                    <span class="percentage">85%</span>
+                </div>
+
+                <div class="skill">
+                    <label for="nextjs">Next.js</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar nextjs-bar" style="width: 95%;"></div>
+                    </div>
+                    <span class="percentage">95%</span>
+                </div>
+
+                <div class="skill">
+                    <label for="git">GitHub</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar git-bar" style="width: 80%;"></div>
+                    </div>
+                    <span class="percentage">80%</span>
+                </div>
+
+                <!-- Problem Solving -->
+                <fieldset>
+                    <legend>Problem Solving</legend>
+                    <textarea id="problemSolving" name="problemSolving" placeholder="Problem Solving" required></textarea><br>    
+                </fieldset>
+
+                <div class="skill">
+                    <label for="analyticalThinking">Analytical Thinking</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar analytical-thinking-bar" style="width: 90%;"></div>
+                    </div>
+                    <span class="percentage">90%</span>
+                </div>
+
+                <div class="skill">
+                    <label for="debugging">Debugging</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar debugging-bar" style="width: 95%;"></div>
+                    </div>
+                    <span class="percentage">95%</span>
+                </div>
+
+                <h4 class="pss">Soft Skills</h4>
+                <fieldset>
+                    <legend>Soft Skills</legend>
+                    <textarea id="softSkills" name="softSkills" placeholder="Skills" required></textarea><br>    
+                </fieldset>
+
+                <div class="skill">
+                    <label for="teamworkCommunication">Teamwork, Communication</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar communication-bar" style="width: 90%;"></div>
+                    </div>
+                    <span class="percentage">90%</span>
+                </div>
+
+                
+                <fieldset>
+                    <legend>Design & Prototyping</legend>
+                    <textarea id="designPrototyping" name="designPrototyping" placeholder="Design & Prototyping" required></textarea><br>    
+                </fieldset>
+
+                <div class="skill">
+                    <label for="figmaResponsiveDesign">Figma, Responsive Design</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar figma-bar" style="width: 85%;"></div>
+                    </div>
+                    <span class="percentage">85%</span>
+                </div>
+            </section>
+        </div>
+    </form>
+
+        <!-- Right Section -->
+        
+        
+        <div id="resume-display" class="right-section" >
+            <h1>Dynamic Resume</h1><br>
+
+            
+                <fieldset class="fieldset">
+                    <legend>Personal Information</legend>
+                    <p>
+                        <label for="name">Name:</label>
+                        <input class="inputRightInfo" type="text" id="name" placeholder="Enter your Name" required>
+                    </p>
+
+                    <p>
+                        <label for="cnic">CNIC :</label>
+                        <input class="inputRightInfo" type="text" id="cnic" placeholder="Enter your CNIC" required>
+                    </p>
+
+                    <p>
+                        <label for="residence">Residence:</label>
+                        <input class="inputRightInfo" type="text" id="residence" placeholder="Enter your Residence" required>
+                    </p>
+
+                    <p>
+                        <label for="dob">Date of Birth:</label>
+                        <input class="inputRightInfo" type="date" id="dob" required>
+                    </p>
+
+                    <p>
+                        <label for="contact">Contact No.:</label>
+                        <input class="inputRightInfo" type="tel" id="contact" placeholder="Enter your Contact Number" required>
+                    </p>
+
+                    <p>
+                        <label>Gender:</label>
+                        Male <input type="radio" id="male" name="gender" placeholder="text" value="male" required>
+                        Female <input  class="input-gender" type="radio" id="female" name="gender" placeholder="text" value="female" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label>
+                        <input class="inputRightInfo" type="email" id="email" placeholder="Enter your Email" required>
+                    </p>
+
+                    <p>
+                        <label for="address">Address:</label>
+                        <input class="inputRightInfo" type="text" id="address" placeholder="Enter your Address" required>
+                    </p>
+
+                   
+                </fieldset>
+            <br>
+
+            <!-- Education -->
+            <fieldset>
+                <legend>Education</legend>
+                <textarea id="education" name="education" placeholder="text" required></textarea><br>    
+            </fieldset>
+
+            <!-- Work Experience -->
+            <fieldset>
+                <legend>Work Experience</legend>
+                <textarea id="workExperience" name="workExperience" placeholder="text" required></textarea><br>    
+            </fieldset>
+
+            <!-- Projects -->
+            <section id="projects">
+                <fieldset>
+                    <legend>Projects</legend>
+                    <textarea id="projectsDetails" name="projectsDetails" placeholder="text" required></textarea><br>    
+                </fieldset>
+                <h2>Additional Projects</h2>
+                <ul class="links">
+                    <li class="link"><a href="https://vercel.com/nousheen-atif">View on Vercel</a></li>
+                    <li class="link"><a href="https://github.com/codewithhoney24">View on GitHub</a></li>
+                    <li class="link"><a href="https://www.linkedin.com/in/nousheen-atif-7873a28a">View on LinkedIn</a></li>
+                </ul>
+            </section>
+
+            <!-- Hobbies -->
+            <fieldset>
+                <legend>Hobbies</legend>
+                <textarea id="hobbies" name="hobbies" placeholder="Hobbies" required></textarea><br>    
+            </fieldset>
+
+        
+
+          
+              
+              
+              
+        
+
+            <fieldset>
+                <legend>Button</legend>
+                                
+                <form onSubmit={handleSubmit}>
+                    <button type="submit">Generate Resume</button>
+                  </form>
+
+            </fieldset>
+    
+        </div>
+       
+
+<div>
+        
+
+ <script class="ts"></script>
+</div>
+
+<div id="resume-display" >
+    <!-- Resume details will be displayed here -->
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
