@@ -12,32 +12,28 @@
          <div class="left-section">
     <form id="resume-container"  >
        
-        <p class="profile-Picture">
-
-
-            <label for="profilePicture">Profile Picture:</label>
-            <input type="file" id="profilePicture" name="profilePicture" accept="image/*"><b></b>
+        
 
         </p >
             <!-- Career Objective -->
             <fieldset class="objective">
                 <legend class="Career"  >Career Objective</legend>
-                <textarea id="objective" name="objective" placeholder="Objective" required></textarea><br>    
+                <textarea   class="inputRightInfo" id="objective" name="objective" placeholder="Objective" required></textarea><br>    
             </fieldset>
 
             <!-- Certifications -->
             <fieldset class="Certificates">
                 <legend class="Certificate">Certifications</legend>
-                <textarea id="certifications" name="certifications" placeholder="Certifications" required></textarea><br>    
+                <textarea  class="inputRightInfo" id="certifications" name="certifications" placeholder="Certifications" required></textarea><br>    
             </fieldset>
 
             <!-- Skills Section -->
             <section id="skills">
                 <h2 class="skis">Skill Sets</h2>
 
-                <fieldset>
-                    <legend>Frontend Technologies</legend>
-                    <textarea id="frontendTechnologies" name="frontendTechnologies" placeholder="Technologies" required></textarea><br>    
+                <fieldset  class="Certificates">
+                    <legend  class="Certificate">Frontend Technologies</legend>
+                    <textarea  class="inputRightInfo" id="frontendTechnologies" name="frontendTechnologies" placeholder="Technologies" required></textarea><br>    
                 </fieldset>
 
                 <div class="skill">
@@ -64,13 +60,18 @@
                     <span class="percentage">85%</span>
                 </div>
 
+                
                 <div class="skill">
-                    <label for="nextjs">Next.js</label>
+                    <label for="next.js">Next.js</label>
                     <div class="progress-bar-container">
-                        <div class="progress-bar nextjs-bar" style="width: 95%;"></div>
+                        <div class="progress-bar next.js-bar" style="width: 100%;"></div>
                     </div>
-                    <span class="percentage">95%</span>
+                    <span class="percentage">100%</span>
                 </div>
+
+
+
+
 
                 <div class="skill">
                     <label for="git">GitHub</label>
@@ -81,9 +82,9 @@
                 </div>
 
                 <!-- Problem Solving -->
-                <fieldset>
+                <fieldset  class="Certificates">
                     <legend>Problem Solving</legend>
-                    <textarea id="problemSolving" name="problemSolving" placeholder="Problem Solving" required></textarea><br>    
+                    <textarea  class="inputRightInfo" id="problemSolving" name="problemSolving" placeholder="Problem Solving" required></textarea><br>    
                 </fieldset>
 
                 <div class="skill">
@@ -103,9 +104,10 @@
                 </div>
 
                 <h4 class="pss">Soft Skills</h4>
-                <fieldset>
-                    <legend>Soft Skills</legend>
-                    <textarea id="softSkills" name="softSkills" placeholder="Skills" required></textarea><br>    
+                <fieldset  class="Certificates">
+                    <legend  class="Certificate">Soft Skills</legend>
+                
+                    <textarea class="inputRightInfo" id="softSkills" name="softSkills" placeholder="Skills" required></textarea><br>    
                 </fieldset>
 
                 <div class="skill">
@@ -117,9 +119,9 @@
                 </div>
 
                 
-                <fieldset>
-                    <legend>Design & Prototyping</legend>
-                    <textarea id="designPrototyping" name="designPrototyping" placeholder="Design & Prototyping" required></textarea><br>    
+                <fieldset class="Certificates">
+                    <legend  class="Certificate">Design & Prototyping</legend>
+                    <textarea  class="inputRightInfo" id="designPrototyping" name="designPrototyping" placeholder="Design & Prototyping" required></textarea><br>    
                 </fieldset>
 
                 <div class="skill">
@@ -137,13 +139,14 @@
         
         
         <div id="resume-display" class="right-section" >
-            <h1>Dynamic Resume</h1><br>
+            <h1 > Dynamic Resume</h1>
+<br>
 
             
                 <fieldset class="fieldset">
                     <legend>Personal Information</legend>
                     <p>
-                        <label for="name">Name:</label>
+                        <label for="name">Name :</label>
                         <input class="inputRightInfo" type="text" id="name" placeholder="Enter your Name" required>
                     </p>
 
@@ -153,34 +156,45 @@
                     </p>
 
                     <p>
-                        <label for="residence">Residence:</label>
+                        <label for="residence">Residence :</label>
                         <input class="inputRightInfo" type="text" id="residence" placeholder="Enter your Residence" required>
                     </p>
 
                     <p>
-                        <label for="dob">Date of Birth:</label>
+                        <label for="dob">Date of Birth :</label>
                         <input class="inputRightInfo" type="date" id="dob" required>
                     </p>
 
                     <p>
-                        <label for="contact">Contact No.:</label>
+                        <label for="contact">Contact No :</label>
                         <input class="inputRightInfo" type="tel" id="contact" placeholder="Enter your Contact Number" required>
                     </p>
 
                     <p>
                         <label>Gender:</label>
                         Male <input type="radio" id="male" name="gender" placeholder="text" value="male" required>
-                        Female <input  class="input-gender" type="radio" id="female" name="gender" placeholder="text" value="female" required>
+                        Female <input  class="inputRightInfo" type="radio" id="female" name="gender" placeholder="text" value="female" required>
                     </p>
 
                     <p>
-                        <label for="email">Email:</label>
+                        <label for="email">Email :</label>
                         <input class="inputRightInfo" type="email" id="email" placeholder="Enter your Email" required>
                     </p>
 
                     <p>
-                        <label for="address">Address:</label>
-                        <input class="inputRightInfo" type="text" id="address" placeholder="Enter your Address" required>
+                        <label for="city">City :</label>
+                        <input class="inputRightInfo" type="text" id="city" placeholder="Enter your city" required>
+                    </p>
+
+                    <p class="profile-Picture">
+
+
+                        <label for="profilePicture">Profile Picture:</label>
+                        <!-- <input type="file" id="profilePicture" name="profilePicture" accept="image/*"><b></b> -->
+                        <input  class="inputRightInfo" type="file" id="imageInput" placeholder="Picture" onchange="previewImage(event)">
+                       
+                        <img src="" alt="Profile Picture" class="img-pic">
+            
                     </p>
 
                    
@@ -188,51 +202,42 @@
             <br>
 
             <!-- Education -->
-            <fieldset>
+            <fieldset class="fieldset1" >
                 <legend>Education</legend>
-                <textarea id="education" name="education" placeholder="text" required></textarea><br>    
+                <textarea  class="inputRightInfo" id="education" name="education" placeholder="text" required></textarea><br>    
             </fieldset>
 
             <!-- Work Experience -->
-            <fieldset>
+            <fieldset  class="fieldset1">
                 <legend>Work Experience</legend>
-                <textarea id="workExperience" name="workExperience" placeholder="text" required></textarea><br>    
+                <textarea  class="inputRightInfo" id="workExperience" name="workExperience" placeholder="text" required></textarea><br>    
             </fieldset>
 
             <!-- Projects -->
             <section id="projects">
-                <fieldset>
+                <fieldset class="fieldset1">
                     <legend>Projects</legend>
-                    <textarea id="projectsDetails" name="projectsDetails" placeholder="text" required></textarea><br>    
+                    <textarea  class="inputRightInfo" id="projectsDetails" name="projectsDetails" placeholder="text" required></textarea><br>    
                 </fieldset>
-                <h2>Additional Projects</h2>
-                <ul class="links">
-                    <li class="link"><a href="https://vercel.com/nousheen-atif">View on Vercel</a></li>
-                    <li class="link"><a href="https://github.com/codewithhoney24">View on GitHub</a></li>
-                    <li class="link"><a href="https://www.linkedin.com/in/nousheen-atif-7873a28a">View on LinkedIn</a></li>
-                </ul>
+                
             </section>
 
             <!-- Hobbies -->
-            <fieldset>
+            <fieldset class="fieldset1">
                 <legend>Hobbies</legend>
-                <textarea id="hobbies" name="hobbies" placeholder="Hobbies" required></textarea><br>    
+                <textarea  class="inputRightInfo" id="hobbies" name="hobbies" placeholder="Hobbies" required></textarea><br>    
             </fieldset>
 
-        
-
-          
-              
-              
               
         
 
-            <fieldset>
+            <fieldset class="fieldset">
                 <legend>Button</legend>
                                 
-                <form onSubmit={handleSubmit}>
-                    <button type="submit">Generate Resume</button>
-                  </form>
+                <form id="resume-container" onsubmit="generateResume(event)">
+                    <button   class="inputRightInfo" type="submit">Generate Resume</button>
+                </form>
+                
 
             </fieldset>
     
@@ -242,10 +247,10 @@
 <div>
         
 
- <script class="ts"></script>
+ 
 </div>
 
-<div id="resume-display" >
+<div  class="generate" id="resumeOutput" >
     <!-- Resume details will be displayed here -->
 </div>
 
