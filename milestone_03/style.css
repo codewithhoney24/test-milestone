@@ -2,7 +2,7 @@
 body {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 1200;
     font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
       "Helvetica Neue", sans-serif;
     background-color: rgb(1, 1, 1);
@@ -34,40 +34,45 @@ body {
     font-family: var(--heading-font-family);
     font-weight: var(-heading-font-weight);
     color: var(heading-color);
-    margin-top: 0.5em;
+    
     line-height: 1.2;
   }
   
   h1 {
     font-size: var(h1-font-size);
+    margin-top: 2em;
   }
   h2 {
-    font-size: var(h2-font-size);
+    font-size: 1.75em;
   }
   h3 {
     font-size: var(h3-font-size);
   }
+  
   
   /* Container Styles */
   .resume-container {
     display: flex;
     align-items: flex-start;
     width: 80%;
-  
+    
+    border-left:20px solid #815903;
     margin: 0 auto;
-  
+
     background: linear-gradient(
       to right,
       rgb(129, 89, 3) 0%,
       rgb(221, 189, 9) 50%,
       rgb(6, 245, 213) 100%
     );
+
     padding: 40px;
     border-radius: 10px;
+  
   }
   
   .fieldset {
-    margin-top: 70px;
+    margin-top: 20%;
     font-size: 30px;
     font-weight: 900;
     color: white;
@@ -78,16 +83,17 @@ body {
   }
   
   legend {
-    font-size: 20px;
+    padding: 4px;
+    font-size: 14px;
     font-weight: bold;
     color: white;
     border-radius: 5px;
     border: 2px solid rgb(248, 207, 3);
     box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
-    padding: 3px;
+    
   }
   .fieldset1 {
-    margin-top: 50px;
+    margin-top: 19%;
     font-size: 30px;
     font-weight: 900;
     color: white;
@@ -95,21 +101,38 @@ body {
     border: 2px solid rgb(248, 207, 3);
     box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
     padding: 5px;
+    margin-bottom: 60px;
   }
+
+  
+.inputgender{
+padding-top: 30px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  border: 1px solid rgb(248, 207, 3);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(147, 244, 239, 0.982);
+}
+
+
   
   .inputRightInfo {
     font-size: large;
-    margin-top: 25px;
+  width: 80%;
     padding: 5px;
-    margin-left: 10px;
+  max-width: 200px;
     border-radius: 5px;
     border: 2px solid rgb(248, 207, 3);
     box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    
   }
   
-  /* Left Section */
-  .left-section {
+  /* right Section */
+  .right-section {
+    
     width: 30%;
     border-radius: 15px;
     padding: 30px;
@@ -120,12 +143,52 @@ body {
   }
   
   /* Profile Picture */
+  .profilePic{
+  
+    max-width: 90%;
+    margin:20px auto;
+    padding:20px;
+    
+    
+    font-size: 2px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(248, 207, 3);
+    box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
+   
+  }
+
+
+  .Certificate{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 30%;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(248, 207, 3);
+    box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
+  }
+
+
+
+  .Certificates {
+    height: 150px;
+    border-radius: 5px;
+    border: 2px solid rgb(248, 207, 3);
+    box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
+    list-style-type: none;
+    padding: 0;
+    
+  }
   .profile-Picture,
   .Career,
-  .objective,
-  .Certificate,
-  .Certificates {
-    margin-top: 35%;
+  .objective
+  {
+    
+    margin-top: 25%;
     font-size: 24px;
     font-weight: bold;
     color: white;
@@ -136,13 +199,14 @@ body {
   
   /* Image Styling */
   .img-pic {
+    padding: 20px;
     width: 150px;
     height: 180px;
     border-radius: 50%;
-    overflow: hidden;
+  object-fit: cover;
     border: 5px solid rgb(248, 207, 3);
     box-shadow: 0 0 16px rgba(4, 252, 252, 0.982);
-    display: none;
+  
   }
   
   /* Spacing Adjustments */
@@ -169,6 +233,7 @@ body {
   
   .skis,
   .pss {
+    font-size: x-large;
     margin-top: 40px;
     color: white;
     padding: 10px;
@@ -234,9 +299,9 @@ body {
     color: #0bf3d8;
   }
   
-  /* Right Section */
-  .right-section {
-    height: 97.5%;
+  /* left Section */
+  .left-section {
+    height: 98%;
     flex: 1;
     padding: 30px;
     border-radius: 15px;
@@ -246,17 +311,17 @@ body {
     box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
   }
   
-  .right-section,
+  .left-section,
   legend,
   #hobbies {
     font-size: xx-large;
     text-align: center;
   }
   
-  /* Right Section Text Elements */
-  .right-section p,
-  .right-section ul {
-    margin: 20px;
+  /* left Section Text Elements */
+  .left-section p,
+  .left-section ul {
+    margin: 60px;
     font-size: 20px;
     font-weight: 700;
     border: 1px solid rgb(248, 207, 3);
@@ -264,7 +329,7 @@ body {
     box-shadow: 0 0 10px rgba(147, 244, 239, 0.982);
   }
   
-  /* Profile Picture Input */
+  
   .chose-file {
     padding: 12px;
     margin-left: 25%;
@@ -281,7 +346,7 @@ body {
     font-family: "Trebuchet MS", sans-serif;
     color: rgb(28, 250, 250);
     font-weight: 900;
-    font-size: larger;
+    font-size:medium;
     text-decoration: none;
   }
   
@@ -305,17 +370,36 @@ body {
   }
   
   button:hover {
-    background-color: #21b6b1;
+    background-color: #7f9c9b;
   }
   
+  .fieldsetbtn{
+  
+    height: 130px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(248, 207, 3);
+    box-shadow: 0 0 14px rgba(4, 252, 252, 0.982);
+    padding: 5px;
+
+  }
+
+
   .generate {
-    padding-left: 10px;
-    margin: 20px;
-    font-size: 1.5rem;
+padding-right: 8px;
+box-sizing: border-box;
+max-width: 90% ;
+  
+    padding-left: 8px;
+    margin: 10px auto;
+    font-size: 1.5rem;;
     font-weight: 900;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     
-  
+  border: 10px solid  rgb(6, 245, 213) 100%;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(147, 244, 239, 0.982);
     transition: background-color 0.3s ease;
@@ -324,24 +408,247 @@ body {
     }
   }
   
-  /* Responsive Layout */
-  
-  @media (max-width: 768px) {
-    .resume-container {
-      flex-direction: column;
-      width: 90%;
-    }
-    .left-section,
-    .right-section {
-      width: 100%;
-      margin: 10px 0;
-    }
-  
-    h1 {
-      font-size: 2rem;
-    }
-    h2 {
-      font-size: 1.75rem;
-    }
+ 
+
+
+
+
+/* Responsive Layout */
+@media (max-width: 1232px) {
+  .generate {
+    max-width: 80%; 
+    font-size: 1rem; 
+    margin: 15px auto; 
   }
-  
+  h1{
+    font-size: 2rem; 
+  }
+  h2{
+    font-size: 1.50rem; 
+  }
+}
+
+/* Adjustments for screens between 926px and 774px */
+@media (max-width: 926px) and (min-width: 774px) {
+  .generate {
+    max-width: 90%; 
+    font-size: 0.75rem; 
+    padding-left: 12px; 
+    padding-right: 12px; 
+  }
+}
+
+/* Adjustments for screens between 770px and 774px */
+@media (max-width: 774px) and (min-width: 770px) {
+  .generate {
+    max-width: 100%; 
+    font-size: 0.625rem; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    margin: 5px auto; 
+  }
+}
+
+/* Adjustments for screens smaller than 770px */
+@media (max-width: 770px) {
+  .generate {
+    max-width: 100%; 
+    font-size: 0.5rem; 
+    padding-left: 8px; 
+    padding-right: 8px; 
+    margin: 5px auto; 
+  }
+}
+
+/* Adjustments for screens larger than 926px */
+@media (min-width: 927px) {
+  .generate {
+    max-width: 80%; /* Larger width for big screens */
+    margin: 20px auto; /* Increase margin */
+  }
+}
+
+/* Additional adjustments for screens between 975px and 770px */
+@media (max-width: 975px) and (min-width: 770px) {
+  .generate {
+    max-width: 55%; /* Further reduce width for medium screens */
+    font-size: 0.625rem; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+  }
+}
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  .resume-container {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .left-section, .left-section {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  #skills .skill {
+    font-size: medium;
+    padding: 5px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .resume-container {
+    flex-direction: column;
+    width: 95%;
+    padding: 15px;
+  }
+
+
+
+  .left-section, .left-section {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  .img-pic {
+    width: 120px;
+    height: 140px;
+  }
+
+  .fieldset, .fieldset1 {
+    font-size: 24px;
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.20rem;
+  }
+
+  #skills .skill {
+    font-size: medium;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .right-section, .left-section {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .profilePic {
+    max-width: 80%;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .img-pic {
+    width: 100px;
+    height: 120px;
+  }
+  .inputRightInfo {
+    max-width: 150px; /* Reduce max width for narrow screens */
+    font-size: medium; /* Adjust font size for better readability */
+  }
+  .fieldset, .fieldset1 {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  #skills .skill {
+    font-size: small;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .resume-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 8px;
+  }
+
+  .right-section, .left-section {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+  }
+
+  .profilePic {
+    max-width: 75%;
+    
+    padding: 8px;
+  }
+
+  .img-pic {
+    width: 90px;
+    height: 110px;
+  }
+
+  .inputRightInfo {
+    max-width: 120px; /* Further reduce max width for very small screens */
+    font-size: small; /* Reduce font size */
+  }
+
+  .fieldset, .fieldset1 {
+    font-size: 14px;
+    padding: 4px;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  #skills .skill {
+    font-size: 0.9rem;
+    padding: 4px;
+  }
+
+  .left-section p,
+  .left-section ul {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  #hobbies {
+    font-size: 1rem;
+  }
+}
+
+
