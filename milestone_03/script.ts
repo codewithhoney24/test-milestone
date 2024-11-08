@@ -16,11 +16,15 @@ profilePictureInput.addEventListener("change", (event) => {
     }
 });
 
+
+
+
 // Function to generate and display resume
 function generateResume(event: Event) {
     event.preventDefault();
     
     // Collecting input values
+    
     const name = (document.getElementById("name") as HTMLInputElement).value;
     const cnic = (document.getElementById("cnic") as HTMLInputElement).value;
     const residence = (document.getElementById("residence") as HTMLInputElement).value;
@@ -39,9 +43,25 @@ function generateResume(event: Event) {
     const projectsDetails = (document.getElementById("projectsDetails") as HTMLTextAreaElement).value;
     const hobbies = (document.getElementById("hobbies") as HTMLTextAreaElement).value;
 
+
+
+
+ // Check for required fields (simple validation)
+ if (!name || !cnic || !residence || !dob || !contact || !gender || !email) {
+    alert("Please fill in all the required fields.");
+    return;
+}
+
+
+
+
     // Creating HTML for dynamic resume display
     const resumeHTML = `
-        <p><strong>Name:</strong> ${name}</p>
+    <h1>Dynamic Resume</h1><b>
+     <img src="${ imgPreview.src}" alt="Profile Picture" class="img-pic">
+
+        <h2>Personal Information</h2>
+        <p><strong>Name:</strong> ${name}</p> 
         <p><strong>CNIC:</strong> ${cnic}</p>
         <p><strong>Residence:</strong> ${residence}</p>
         <p><strong>Date of Birth:</strong> ${dob}</p>
