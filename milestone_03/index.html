@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,26 +9,94 @@
 </head>
 <body>
     <div class="resume-container">
-         <!-- Left Section -->
-         <div class="left-section">
-    <form id="resume-container"  >
+        <!-- Left Section -->
+        <div id="resume-display" class="left-section">
+            <h1>Dynamic Resume</h1>
+
+            <fieldset class="fieldset">
+                <legend class="Certificate">Personal Information</legend>
+                <p><label for="name">Name :</label>
+                <input class="inputRightInfo" type="text" id="name" placeholder="Enter your Name" required></p>
+
+                <p><label for="cnic">CNIC :</label>
+                <input class="inputRightInfo" type="text" id="cnic" placeholder="Enter your CNIC" required></p>
+
+                <p><label for="residence">Residence :</label>
+                <input class="inputRightInfo" type="text" id="residence" placeholder="Enter your Residence" required></p>
+
+                <p><label for="dob">Date of Birth :</label>
+                <input class="inputRightInfo" type="date" id="dob" required></p>
+
+                <p><label for="contact">Contact No :</label>
+                <input class="inputRightInfo" type="tel" id="contact" placeholder="Enter your Contact Number" required></p>
+
+                <p><label for="email">Email :</label>
+                <input class="inputRightInfo" type="email" id="email" placeholder="Enter your Email" required></p>
+
+                <p><label for="city">City :</label>
+                <input class="inputRightInfo" type="text" id="city" placeholder="Enter your city" required></p>
+
+                <p class="inputgender"> Gender:
+                    Male <input type="radio" id="male" name="gender"  placeholder="text" value="male" required>
+                    Female <input type="radio" id="female" name="gender"  placeholder="text"   value="female" required>
+                </p>
+            </fieldset>
+            
+            <!-- Education Section -->
+            <fieldset class="fieldset1">
+                <legend>Education</legend>
+                <textarea class="inputRightInfo" id="education" name="education" placeholder="Enter your Education" required></textarea>
+            </fieldset>
+
+            <!-- Work Experience Section -->
+            <fieldset class="fieldset1">
+                <legend>Work Experience</legend>
+                <textarea class="inputRightInfo" id="workExperience" name="workExperience" placeholder="Enter your Work Experience" required></textarea>
+            </fieldset>
+
+            <!-- Projects Section -->
+            <fieldset class="fieldset1">
+                <legend>Projects</legend>
+                <textarea class="inputRightInfo" id="projectsDetails" name="projectsDetails" placeholder="Enter your Projects" required></textarea>
+            </fieldset>
+
+            <!-- Hobbies Section -->
+            <fieldset class="fieldset1">
+                <legend>Hobbies</legend>
+                <textarea class="inputRightInfo" id="hobbies" name="hobbies" placeholder="Enter your Hobbies" required></textarea>
+            </fieldset>
+        </div>
+
+
+
+
        
+         <!-- right Section -->
+         <div class="right-section">
+            <form id="resume-container"  >
         
+                    <fieldset class="objective">
+                        <legend class=" Career"  >Profile Picture</legend>
+                        
+                            <!-- <input type="file" id="profilePicture" name="profilePicture" accept="image/*"><b></b>--->
+                            <input  class="inputRightInfo" type="file" id="imageInput" placeholder="Picture" onchange="previewImage(event)">
+                               
+                            <img src="" alt=" Picture" class="img-pic">
+                    </fieldset>
 
-        </p >
-            <!-- Career Objective -->
-            <fieldset class="objective">
-                <legend class="Career"  >Career Objective</legend>
-                <textarea   class="inputRightInfo" id="objective" name="objective" placeholder="Objective" required></textarea><br>    
-            </fieldset>
+                <!-- Career Objective -->
+                <fieldset class="objective">
+                    <legend class="Career">Career Objective</legend>
+                    <textarea class="inputRightInfo" id="objective" name="objective" placeholder="Enter your Objective" required></textarea>
+                </fieldset>
 
-            <!-- Certifications -->
-            <fieldset class="Certificates">
-                <legend class="Certificate">Certifications</legend>
-                <textarea  class="inputRightInfo" id="certifications" name="certifications" placeholder="Certifications" required></textarea><br>    
-            </fieldset>
+                <!-- Certifications -->
+                <fieldset class="Certificates">
+                    <legend class="Certificate">Certifications</legend>
+                    <textarea class="inputRightInfo" id="certifications" name="certifications" placeholder="Enter your Certifications" required></textarea>
+                </fieldset>
 
-            <!-- Skills Section -->
+                <!-- Skills Section -->
             <section id="skills">
                 <h2 class="skis">Skill Sets</h2>
 
@@ -68,9 +137,6 @@
                     </div>
                     <span class="percentage">100%</span>
                 </div>
-
-
-
 
 
                 <div class="skill">
@@ -132,129 +198,27 @@
                     <span class="percentage">85%</span>
                 </div>
             </section>
-        </div>
-    </form>
 
-        <!-- Right Section -->
-        
-        
-        <div id="resume-display" class="right-section" >
-            <h1 > Dynamic Resume</h1>
-<br>
-
-            
-                <fieldset class="fieldset">
-                    <legend>Personal Information</legend>
-                    <p>
-                        <label for="name">Name :</label>
-                        <input class="inputRightInfo" type="text" id="name" placeholder="Enter your Name" required>
-                    </p>
-
-                    <p>
-                        <label for="cnic">CNIC :</label>
-                        <input class="inputRightInfo" type="text" id="cnic" placeholder="Enter your CNIC" required>
-                    </p>
-
-                    <p>
-                        <label for="residence">Residence :</label>
-                        <input class="inputRightInfo" type="text" id="residence" placeholder="Enter your Residence" required>
-                    </p>
-
-                    <p>
-                        <label for="dob">Date of Birth :</label>
-                        <input class="inputRightInfo" type="date" id="dob" required>
-                    </p>
-
-                    <p>
-                        <label for="contact">Contact No :</label>
-                        <input class="inputRightInfo" type="tel" id="contact" placeholder="Enter your Contact Number" required>
-                    </p>
-
-                    <p>
-                        <label>Gender:</label>
-                        Male <input type="radio" id="male" name="gender" placeholder="text" value="male" required>
-                        Female <input  class="inputRightInfo" type="radio" id="female" name="gender" placeholder="text" value="female" required>
-                    </p>
-
-                    <p>
-                        <label for="email">Email :</label>
-                        <input class="inputRightInfo" type="email" id="email" placeholder="Enter your Email" required>
-                    </p>
-
-                    <p>
-                        <label for="city">City :</label>
-                        <input class="inputRightInfo" type="text" id="city" placeholder="Enter your city" required>
-                    </p>
-
-                    <p class="profile-Picture">
-
-
-                        <label for="profilePicture">Profile Picture:</label>
-                        <!-- <input type="file" id="profilePicture" name="profilePicture" accept="image/*"><b></b> -->
-                        <input  class="inputRightInfo" type="file" id="imageInput" placeholder="Picture" onchange="previewImage(event)">
-                       
-                        <img src="" alt="Profile Picture" class="img-pic">
-            
-                    </p>
-
-                   
-                </fieldset>
-            <br>
-
-            <!-- Education -->
-            <fieldset class="fieldset1" >
-                <legend>Education</legend>
-                <textarea  class="inputRightInfo" id="education" name="education" placeholder="text" required></textarea><br>    
-            </fieldset>
-
-            <!-- Work Experience -->
-            <fieldset  class="fieldset1">
-                <legend>Work Experience</legend>
-                <textarea  class="inputRightInfo" id="workExperience" name="workExperience" placeholder="text" required></textarea><br>    
-            </fieldset>
-
-            <!-- Projects -->
-            <section id="projects">
-                <fieldset class="fieldset1">
-                    <legend>Projects</legend>
-                    <textarea  class="inputRightInfo" id="projectsDetails" name="projectsDetails" placeholder="text" required></textarea><br>    
-                </fieldset>
-                
-            </section>
-
-            <!-- Hobbies -->
-            <fieldset class="fieldset1">
-                <legend>Hobbies</legend>
-                <textarea  class="inputRightInfo" id="hobbies" name="hobbies" placeholder="Hobbies" required></textarea><br>    
-            </fieldset>
-
-              
-        
-
-            <fieldset class="fieldset">
-                <legend>Button</legend>
-                                
-                <form id="resume-container" onsubmit="generateResume(event)">
-                    <button   class="inputRightInfo" type="submit">Generate Resume</button>
-                </form>
-                
-
-            </fieldset>
+               
+                <!-- Generate Resume Button -->
+                <fieldset class="fieldsetbtn">
+                    <legend>Button</legend>
+                                    
+                    <form id="resume-container" onsubmit="generateResume(event)">
+                        <button   class="inputRightInfo" type="submit">Generate Resume</button>
+                    </form>
+                    
     
+                </fieldset>
+            
+            <!-- Resume Output Display -->
+            <div class="generate" id="resumeOutput">
+                <!-- Generated resume details will appear here -->
+            </div>
         </div>
-       
-
-<div>
-        
-
- 
-</div>
-
-<div  class="generate" id="resumeOutput" >
-    <!-- Resume details will be displayed here -->
-</div>
-
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
