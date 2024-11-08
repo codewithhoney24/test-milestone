@@ -1,9 +1,23 @@
-var form = document.getElementById("resume-container");
-var resumeDisplayElement = document.getElementById("resume-display");
-form.addEventListener('submit', function (event) {
-    var _a, _b;
-    event.preventDefault(); // Prevent form submission
-    // Get all form elements
+// Selecting form and output elements
+var resumeOutput = document.getElementById("resumeOutput");
+// Handling profile picture display
+var profilePictureInput = document.getElementById("imageInput");
+var imgPreview = document.querySelector(".img-pic");
+profilePictureInput.addEventListener("change", function (event) {
+    var target = event.target;
+    if (target.files && target.files[0]) {
+        var reader_1 = new FileReader();
+        reader_1.onload = function () {
+            imgPreview.src = reader_1.result;
+        };
+        reader_1.readAsDataURL(target.files[0]);
+    }
+});
+// Function to generate and display resume
+function generateResume(event) {
+    var _a;
+    event.preventDefault();
+    // Collecting input values
     var name = document.getElementById("name").value;
     var cnic = document.getElementById("cnic").value;
     var residence = document.getElementById("residence").value;
@@ -11,8 +25,7 @@ form.addEventListener('submit', function (event) {
     var contact = document.getElementById("contact").value;
     var gender = (_a = document.querySelector('input[name="gender"]:checked')) === null || _a === void 0 ? void 0 : _a.value;
     var email = document.getElementById("email").value;
-    var address = document.getElementById("address").value;
-    var careerObjective = document.getElementById("objective").value;
+    var objective = document.getElementById("objective").value;
     var certifications = document.getElementById("certifications").value;
     var frontendTechnologies = document.getElementById("frontendTechnologies").value;
     var problemSolving = document.getElementById("problemSolving").value;
@@ -20,32 +33,15 @@ form.addEventListener('submit', function (event) {
     var designPrototyping = document.getElementById("designPrototyping").value;
     var education = document.getElementById("education").value;
     var workExperience = document.getElementById("workExperience").value;
-    var projects = document.getElementById("projectsDetails").value;
-    var hobbiesContent = document.getElementById("hobbies").value;
-    var profilePictureInput = document.getElementById("profilePicture");
-    var profilePictureFile = (_b = profilePictureInput.files) === null || _b === void 0 ? void 0 : _b[0];
-    // Basic resume content HTML
-    var resumeHTML = "\n    <h2><b>Resume</b></h2>\n    <h3><b>Personal Information</b></h3>\n    <p><b>Name:</b> ".concat(name, "</p>\n    <p><b>CNIC:</b> ").concat(cnic, "</p>\n    <p><b>Residence:</b> ").concat(residence, "</p>\n    <p><b>Date of Birth:</b> ").concat(dob, "</p>\n    <p><b>Contact No:</b> ").concat(contact, "</p>\n    <p><b>Gender:</b> ").concat(gender, "</p>\n    <p><b>Email:</b> ").concat(email, "</p>\n    <p><b>Address:</b> ").concat(address, "</p>\n\n    <h3><b>Career Objective</b></h3>\n    <p>").concat(careerObjective, "</p>\n\n    <h3><b>Certifications</b></h3>\n    <p>").concat(certifications, "</p>\n\n    <h3><b>Frontend Technologies</b></h3>\n    <p>").concat(frontendTechnologies, "</p>\n\n    <h3><b>Problem Solving</b></h3>\n    <p>").concat(problemSolving, "</p>\n\n    <h3><b>Soft Skills</b></h3>\n    <p>").concat(softSkills, "</p>\n\n    <h3><b>Design & Prototyping</b></h3>\n    <p>").concat(designPrototyping, "</p>\n\n    <h3><b>Education</b></h3>\n    <p>").concat(education, "</p>\n\n    <h3><b>Work Experience</b></h3>\n    <p>").concat(workExperience, "</p>\n\n    <h3><b>Projects</b></h3>\n    <p>").concat(projects, "</p>\n\n    <h3><b>Hobbies</b></h3>\n    <p>").concat(hobbiesContent, "</p>\n  ");
-    if (profilePictureFile) {
-        var reader_1 = new FileReader();
-        reader_1.onload = function () {
-            var profilePictureHTML = "<img src=\"".concat(reader_1.result, "\" alt=\"Profile Picture\" class=\"profilePicture\">");
-            // Append profile picture to resume HTML
-            resumeHTML = profilePictureHTML + resumeHTML;
-            displayResume(resumeHTML);
-        };
-        reader_1.readAsDataURL(profilePictureFile);
+    var projectsDetails = document.getElementById("projectsDetails").value;
+    var hobbies = document.getElementById("hobbies").value;
+    // Check for required fields (simple validation)
+    if (!name || !cnic || !residence || !dob || !contact || !gender || !email) {
+        alert("Please fill in all the required fields.");
+        return;
     }
-    else {
-        // No profile picture, generate the resume immediately
-        displayResume(resumeHTML);
-    }
-});
-function displayResume(resumeHTML) {
-    if (resumeDisplayElement) {
-        resumeDisplayElement.innerHTML = resumeHTML;
-    }
-    else {
-        console.error("Failed to display resume");
-    }
+    // Creating HTML for dynamic resume display
+    var resumeHTML = "\n    <h1>Dynamic Resume</h1><b>\n     <img src=\"".concat(imgPreview.src, "\" alt=\"Profile Picture\" class=\"img-pic\">\n\n        <h2>Personal Information</h2>\n        <p><strong>Name:</strong> ").concat(name, "</p> \n        <p><strong>CNIC:</strong> ").concat(cnic, "</p>\n        <p><strong>Residence:</strong> ").concat(residence, "</p>\n        <p><strong>Date of Birth:</strong> ").concat(dob, "</p>\n        <p><strong>Contact:</strong> ").concat(contact, "</p>\n        <p><strong>Gender:</strong> ").concat(gender, "</p>\n        <p><strong>Email:</strong> ").concat(email, "</p>\n        <p><strong>Objective:</strong> ").concat(objective, "</p>\n        <p><strong>Certifications:</strong> ").concat(certifications, "</p>\n        <p><strong>Frontend Technologies:</strong> ").concat(frontendTechnologies, "</p>\n        <p><strong>Problem Solving:</strong> ").concat(problemSolving, "</p>\n        <p><strong>Soft Skills:</strong> ").concat(softSkills, "</p>\n        <p><strong>Design & Prototyping:</strong> ").concat(designPrototyping, "</p>\n        <p><strong>Education:</strong> ").concat(education, "</p>\n        <p><strong>Work Experience:</strong> ").concat(workExperience, "</p>\n        <p><strong>Projects:</strong> ").concat(projectsDetails, "</p>\n        <p><strong>Hobbies:</strong> ").concat(hobbies, "</p>\n    ");
+    // Displaying the generated resume
+    resumeOutput.innerHTML = resumeHTML;
 }
